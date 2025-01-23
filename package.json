@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --openssl-legacy-provider build"
+    "build": "node --no-deprecation ./node_modules/react-scripts/bin/react-scripts.js build"
   },
   "eslintConfig": {
     "extends": [
@@ -36,6 +36,6 @@
   "devDependencies": {
     "@types/react": "^19.0.7",
     "@types/react-dom": "^19.0.3",
-    "typescript": "^4.4.4"
+    "typescript": "^5.7.3"
   }
 }
