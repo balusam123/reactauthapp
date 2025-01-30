@@ -7,13 +7,13 @@
     "cra-template": "1.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.1.1",
-    "react-scripts": "^4.0.3",
+    "react-router-dom": "^7.1.4",
+    "react-scripts": "^3.0.1",
     "web-vitals": "^4.2.4"
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
-    "build": "node --no-deprecation ./node_modules/react-scripts/bin/react-scripts.js build"
+    "build": "react-scripts --openssl-legacy-provider build"
   },
   "eslintConfig": {
     "extends": [
@@ -36,6 +36,7 @@
   "devDependencies": {
     "@types/react": "^19.0.7",
     "@types/react-dom": "^19.0.3",
+    "@types/react-router-dom": "^5.3.3",
     "typescript": "^4.0.0"
   }
 }
