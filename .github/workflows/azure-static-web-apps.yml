@@ -15,10 +15,10 @@ jobs:
     name: Build and Deploy Job
     steps:
     - name: Checkout GitHub repository content
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Setup Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '16'  # Ensure compatibility with your app
 
@@ -29,9 +29,9 @@ jobs:
       run: npm run build
 
     - name: Deploy to Azure Static Web Apps
-      uses: Azure/static-web-apps-deploy@v1
+      uses: Azure/static-web-apps-deploy
       with:
         azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
         action: "upload" 
-        app_location: "/"   # Update based on your project structure
-        output_location: "build"   # Update based on your build output
+        app_location: "auth-app"   # Update based on your project structure
+        output_location: "auth-app/build"   # Update based on your build output
